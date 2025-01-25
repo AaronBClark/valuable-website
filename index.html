@@ -1,31 +1,67 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synthesis - Life Management App</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         html, body {
             height: 100%;
             margin: 0;
             font-family: Arial, sans-serif;
+        }
+        .parallax {
             background-image: url('climb-2125148_1920.jpg');
+            height: 100vh;
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
     </style>
 </head>
-<body class="bg-gray-100 text-gray-900">
-    <div class="min-h-screen flex items-center justify-center flex-col text-center p-6">
-        <h1 class="text-4xl font-bold mb-4">Synthesis - Life Management App</h1>
-        <p class="text-lg max-w-2xl mb-6">A cross-platform productivity app to help you align your daily tasks and habits with your core values and interests.</p>
-       <form action="https://formspree.io/f/your_form_id" method="POST">
-			<input type="email" name="email" placeholder="Enter your email" required>
-			<button type="submit">Learn More</button>
-		</form> 
-        <footer class="mt-8 text-sm text-gray-500">Coming Soon - Stay tuned!</footer>
-    </div>
+<body class="bg-gray-100 text-gray-900" onload="AOS.init();">
+    
+    <!-- Hero Section -->
+    <section class="parallax flex items-center justify-center text-center text-white">
+        <div data-aos="fade-up">
+            <h1 class="text-5xl font-bold mb-4">Synthesis - Life Management App</h1>
+            <p class="text-lg max-w-2xl mb-6">Align your daily tasks and habits with your core values and interests.</p>
+            <form action="https://formspree.io/f/your_form_id" method="POST">
+                <input type="email" name="email" placeholder="Enter your email" required class="p-3 rounded-lg text-gray-900">
+                <button type="submit" class="bg-blue-600 text-white py-3 px-6 rounded-lg shadow-lg hover:bg-blue-700 transition">Learn More</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-white text-center" data-aos="fade-up">
+        <h2 class="text-4xl font-bold mb-6">Features</h2>
+        <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="p-6 bg-gray-200 rounded-lg shadow-lg">Customization</div>
+            <div class="p-6 bg-gray-200 rounded-lg shadow-lg">Productivity</div>
+            <div class="p-6 bg-gray-200 rounded-lg shadow-lg">Habit Tracking</div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-gray-200 text-center" data-aos="fade-up">
+        <h2 class="text-4xl font-bold mb-6">What People Are Saying</h2>
+        <p class="text-lg max-w-2xl mx-auto">"Synthesis has completely changed how I organize my life!"</p>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="py-20 bg-blue-600 text-center text-white" data-aos="fade-up">
+        <h2 class="text-4xl font-bold mb-6">Start Your Journey Today</h2>
+        <a href="#" class="bg-white text-blue-600 py-3 px-6 rounded-lg shadow-lg hover:bg-gray-100 transition">Sign Up Now</a>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="py-6 text-center text-gray-500">
+        Coming Soon - Stay tuned!
+    </footer>
+
 </body>
 </html>
