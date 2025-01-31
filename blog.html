@@ -16,13 +16,20 @@
             font-family: Arial, sans-serif;
         }
         .parallax {
-            background-image: url('climb-2125148_1920.jpg');
-            height: 100vh;
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-    </style>
+			background-image: url('climb-2125148_1920.jpg');
+			background-size: cover;
+			background-position: center;
+			background-attachment: fixed;
+			min-height: 100vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			color: white;
+			padding: 2rem;
+		}
+	</style>
 </head>
 <body class="bg-gray-100 text-gray-900" onload="AOS.init()";>
     
@@ -39,16 +46,10 @@
     </nav>
 	
 		<!-- Parallax Header Section -->
-		<div class="parallax flex items-center justify-center text-center text-white py-20">
-			<div class="parallax-content">
-				<h1 class="text-4xl font-bold mb-4">Synthesis Blog</h1>
-				<p class="text-lg">Updates, insights, and productivity tips.</p>
-			</div>
-		</div>
-
-		
-		
-		<div class="max-w-3xl mx-auto">
+	<div class="parallax">
+		<h1 class="text-4xl font-bold mb-4">Synthesis Blog</h1>
+		<p class="text-lg">Updates, insights, and productivity tips.</p>
+		<div class="max-w-3xl mx-auto mt-12">
 			<article class="bg-white p-6 rounded-lg shadow-lg mb-6 mt-6">
 				<!-- Title & Date Section -->
 				<h1 class="text-4xl font-bold mb-2 text-blue-600">Welcome to the Synthesis Journey: Aligning Productivity with Purpose</h1>
@@ -137,6 +138,11 @@
 				<p class="text-gray-700">The Synthesis Team</p>
 			</article>
 		</div>
+	</div>
+
+		
+		
+		
 	
 	 <!-- Footer Section -->
     <footer class="py-6 text-center text-gray-500 bg-white shadow-inner mt-12">
